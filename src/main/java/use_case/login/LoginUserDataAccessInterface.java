@@ -9,6 +9,7 @@ public interface LoginUserDataAccessInterface {
 
     /**
      * Checks if the given username exists.
+     *
      * @param username the username to look for
      * @return true if a user with the given username exists; false otherwise
      */
@@ -16,12 +17,14 @@ public interface LoginUserDataAccessInterface {
 
     /**
      * Saves the user.
+     *
      * @param user the user to save
      */
     void save(User user);
 
     /**
      * Returns the user with the given username.
+     *
      * @param username the username to look up
      * @return the user with the given username
      */
@@ -29,7 +32,15 @@ public interface LoginUserDataAccessInterface {
 
     /**
      * Keeps track of which user is logged in.
+     *
      * @param name the name of the user.
      */
     void setCurrentUser(String name);
+
+    /**
+     * Returns the information  of the user.
+     *
+     * @return the user.
+     */
+    String getCurrentUser();
 }
